@@ -30,7 +30,8 @@ export default {
         background: "#151312",
         foreground: "var(--foreground)",
         tertiary: "#7B7B7B",
-        secondary: "#1f2937"
+        secondary: "#1f2937",
+        buttonBackground: "rgb(145, 75, 241)"
 
 
       },

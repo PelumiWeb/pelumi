@@ -1,9 +1,11 @@
 import React, { Ref } from "react";
 import { constantsData } from "../utils/constants";
 import { ArrowRightOutlined } from "@ant-design/icons";
+import { useInView, motion } from "framer-motion";
 
 type Props = {
   elementRef: Ref<HTMLDivElement> | undefined;
+  id: string;
 };
 
 type ExperienceProps = {
@@ -13,8 +15,18 @@ type ExperienceProps = {
   summary: string;
 };
 const ExperienceCard = (data: ExperienceProps) => {
+  const ref = React.useRef(null);
+  const isInView = useInView(ref, {
+    once: true,
+    margin: "-100px",
+  }); //
   return (
-    <div className="group bg-gray-800 w-full cursor-pointer  space-y-4 p-4 rounded-[10px] transition-all ease-in-out bg-opacity-20 hover:bg-opacity-100 relative ">
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="group bg-gray-800 w-full cursor-pointer  space-y-4 p-4 rounded-[10px] transition-all ease-in-out bg-opacity-20 hover:bg-opacity-100 relative ">
       <div className="grid gap-y-4 h-full">
         <p className="text-white text-[20px] leading-[24px] uppercase font-medium font-poppins flex items-center">
           {/* <span className="mr-2 text-gray-700 text-[24px]">Company:</span> */}
@@ -32,14 +44,17 @@ const ExperienceCard = (data: ExperienceProps) => {
       <div className="absolute right-5 top-0 -rotate-45 group-hover:rotate-0  transition-all ease-in-out">
         <ArrowRightOutlined style={{ fontSize: 20, color: "white" }} />
       </div>
-    </div>
+    </motion.div>
   );
 };
 
 const Experience = (props: Props) => {
   return (
-    <div className="h-full mt-[20%]" ref={props.elementRef}>
-      <h1 className="text-white font-poppins text-[70px] font-semibold leading-[90px] uppercase w-[400px]">
+    <div
+      className="h-screen overflow-y-scroll scrollbar-hide mt-[10%]"
+      ref={props.elementRef}
+      id={props.id}>
+      <h1 className="text-white font-poppins text-[50px] md:text-[70px] font-semibold leading-[70px] md:leading-[90px] uppercase w-[400px]">
         {constantsData.yearsOfExperience} years of{" "}
         <span className="text-secondary">experience</span>{" "}
       </h1>

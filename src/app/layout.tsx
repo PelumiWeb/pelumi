@@ -52,7 +52,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased ${BraahOne.variable} ${mont.variable} ${poppins.variable}`}>
         <ThemeProvider>
-          <ScrollProvider>{children}</ScrollProvider>
+          <ScrollProvider>
+            {children}
+          </ScrollProvider>
         </ThemeProvider>
       </body>
     </html>

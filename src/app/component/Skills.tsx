@@ -4,6 +4,7 @@ import Image from "next/image";
 
 type Props = {
   elementRef: Ref<HTMLDivElement> | undefined;
+  id: string;
 };
 type SkillsProps = {
   url: string;
@@ -79,12 +80,15 @@ const SkillsItem = (props: SkillsProps) => {
 
 const Skills = (props: Props) => {
   return (
-    <div className="h-screen" ref={props.elementRef}>
+    <div
+      className="h-full md:h-screen mt-[10%] px-8 md:px-0"
+      ref={props.elementRef}
+      id={props.id}>
       <h1 className="text-white font-poppins text-[70px] font-semibold leading-[90px] uppercase w-[400px]">
         Skills {/* <span className="text-secondary"></span>{" "} */}
       </h1>
 
-      <div className="grid grid-cols-2">
+      <div className="grid place-items-start grid-cols-1 md:grid-cols-2 w-full ">
         {skills.map((data) => (
           <SkillsItem {...data} />
         ))}
