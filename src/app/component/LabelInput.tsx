@@ -6,6 +6,7 @@ type Props = {
   value: string;
   className: string;
   textarea?: boolean;
+  onChange?: any;
 };
 
 const LabelInput = (props: Props) => {
@@ -23,12 +24,14 @@ const LabelInput = (props: Props) => {
           name="w3review"
           className={`${props.className} bg-secondary text-white  font-poppins p-2 rounded-[10px] outline-none  cursor-pointer text-[14px] leading-[20px]`}
           placeholder={props.placeholder}
+          onChange={props.onChange}
         />
       ) : (
         <input
           type="text"
           className={`${props.className} bg-secondary text-white  font-poppins p-2 rounded-[10px] outline-none  cursor-pointer text-[14px] leading-[20px]`}
           placeholder={props.placeholder}
+          onChange={props.onChange}
         />
       )}
     </div>

@@ -12,7 +12,7 @@ type Props = {};
 
 const ProfileCard = (props: Props) => {
   return (
-    <div className="flex  justify-center items-center mt-[25%] md:mt-[0%]">
+    <div className="h-full flex  justify-center items-center mt-[25%] md:mt-[0%]">
       <div className="bg-[#FFFFFF]  rounded-[10px]  w-full md:w-[25%] h-full md:h-[560px] md:flex-grow">
         {/* Image */}
         <div className="w-full flex justify-center items-center ">
@@ -42,22 +42,30 @@ const ProfileCard = (props: Props) => {
 
         <div className="flex items-center justify-center space-x-6 py-4">
           <button className="group hover:active-tab py-2 px-3 rounded-[5px] scale-75 ">
-            <TwitterOutlined
-              style={{ fontSize: 28 }}
-              className="group-hover:text-white"
-            />
+            <a href="https://x.com/PelumSwithme" target="_blank">
+              <TwitterOutlined
+                style={{ fontSize: 28 }}
+                className="group-hover:text-white"
+              />
+            </a>
           </button>
           <button className="group hover:active-tab py-2 px-3 rounded-[5px] scale-75 ">
-            <GithubOutlined
-              style={{ fontSize: 28 }}
-              className="group-hover:text-white"
-            />
+            <a href="https://github.com/PelumiWeb" target="_blank">
+              <GithubOutlined
+                style={{ fontSize: 28 }}
+                className="group-hover:text-white"
+              />
+            </a>
           </button>
           <button className="group hover:active-tab py-2 px-3 rounded-[5px] scale-75 ">
-            <LinkedinOutlined
-              className="group-hover:text-white"
-              style={{ fontSize: 28 }}
-            />
+            <a
+              href="https://www.linkedin.com/in/hassan-ogundipe-906ab7190/"
+              target="_blank">
+              <LinkedinOutlined
+                className="group-hover:text-white"
+                style={{ fontSize: 28 }}
+              />
+            </a>
           </button>
         </div>
       </div>

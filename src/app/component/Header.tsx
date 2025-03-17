@@ -18,7 +18,7 @@ const Header = (props: Props) => {
 
   return (
     <div className="w-full md:w-screen flex justify-center items-center h-[15%] fixed z-10 md:relative  top-0 left-0 right-0">
-      <div className=" bg-gray-800 my-10 flex items-center justify-around w-full md:w-[300px] rounded-[10px] h-full md:h-[60px]">
+      <div className=" bg-gray-800 my-10 flex items-center justify-around w-[300px] rounded-[10px]  h-[60px]">
         {[
           {
             icon: <HomeOutlined style={{ fontSize: 24, color: "white" }} />,
