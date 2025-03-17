@@ -12,7 +12,7 @@ const Contact = (props: Props) => {
   const [message, setMessage] = React.useState("");
 
   return (
-    <div className="h-screen w-full" ref={props.elementRef} id={props.id}>
+    <div className="h-screen w-full mt-8 md:mt-0" ref={props.elementRef} id={props.id}>
       <h1 className="text-white font-poppins text-[50px] md:text-[80px] font-semibold leading-[70px] md:leading-[90px] uppercase w-full md:w-[500px]">
         let's work
       </h1>

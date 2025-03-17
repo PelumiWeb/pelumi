@@ -78,9 +78,9 @@ const Hero = (props: Props) => {
           </p>
         </div>
       </div>
-      <div className="flex items-center space-x-4">
+      <div className="flex items-start md:items-center flex-col md:flex-row space-y-4 md:space-x-4 my-6 md:my-0">
         <button
-          className="group bg-buttonBackground rounded-[10px] w-[200px] h-[55px] my-4 flex"
+          className="hidden group bg-buttonBackground rounded-[10px] w-full md:w-[200px] h-[55px] my-4 md:flex"
           onClick={() => scrollToElement(constantsData.section.contact)}>
           <p className="group-hover:opacity-100 opacity-0 group-hover:translate-y-4 -translate-y-2 translate-x-16 font-poppins text-white transition-all ease-in-out font-semibold ">
             Let's talk
@@ -89,7 +89,15 @@ const Hero = (props: Props) => {
             Let's talk
           </p>
         </button>
-        <button className="group bg-buttonBackground rounded-[10px] w-[200px] h-[55px] my-4 flex justify-center items-center">
+        <button
+          className="group bg-buttonBackground rounded-[10px] w-full md:w-[200px] h-[55px] my-4 flex md:hidden justify-center items-center"
+          onClick={() => scrollToElement(constantsData.section.contact)}>
+          <p className="  font-poppins text-white font-semibold ">
+            Let's talk
+          </p>
+        
+        </button>
+        <button className="group bg-gray-800 rounded-[10px] w-full md:w-[200px] h-[55px] my-4 flex justify-center items-center">
           <a
             href="/Resume (Ogundipe P. Hassan).pdf"
             download={"Ogundipe-Hassan(Frontend)"}

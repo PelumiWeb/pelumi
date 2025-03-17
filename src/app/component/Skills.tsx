@@ -84,7 +84,7 @@ const Skills = (props: Props) => {
       className="h-full md:h-screen mt-[10%]  md:px-0"
       ref={props.elementRef}
       id={props.id}>
-      <h1 className="text-white font-poppins text-[70px] font-semibold leading-[90px] uppercase w-full md:w-[400px]">
+      <h1 className="text-white font-poppins text-[50px] md:text-[70px] font-semibold leading-[70px] md:leading-[90px] uppercase w-full md:w-[400px]">
         Skills {/* <span className="text-secondary"></span>{" "} */}
       </h1>
 
