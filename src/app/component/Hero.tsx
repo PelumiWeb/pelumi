@@ -78,7 +78,7 @@ const Hero = (props: Props) => {
           </p>
         </div>
       </div>
-      <div className="flex items-start md:items-center flex-col md:flex-row space-y-4 md:space-x-4 my-6 md:my-0">
+      <div className="flex items-start md:items-center flex-col md:flex-row space-y-4 md:space-x-4 md:space-y-0 my-6 md:my-0">
         <button
           className="hidden group bg-buttonBackground rounded-[10px] w-full md:w-[200px] h-[55px] my-4 md:flex"
           onClick={() => scrollToElement(constantsData.section.contact)}>
