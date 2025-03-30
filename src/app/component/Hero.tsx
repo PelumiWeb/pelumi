@@ -92,14 +92,11 @@ const Hero = (props: Props) => {
         <button
           className="group bg-buttonBackground rounded-[10px] w-full md:w-[200px] h-[55px] my-4 flex md:hidden justify-center items-center"
           onClick={() => scrollToElement(constantsData.section.contact)}>
-          <p className="  font-poppins text-white font-semibold ">
-            Let's talk
-          </p>
-        
+          <p className="  font-poppins text-white font-semibold ">Let's talk</p>
         </button>
         <button className="group bg-gray-800 rounded-[10px] w-full md:w-[200px] h-[55px] my-4 flex justify-center items-center">
           <a
-            href="/Resume (Ogundipe P. Hassan).pdf"
+            href="/Resume (Ogundipe Pelumi. Hassan).pdf"
             download={"Ogundipe-Hassan(Frontend)"}
             className="flex justify-between items-center space-x-4">
             <p className="font-poppins text-white font-semibold">Download CV</p>
