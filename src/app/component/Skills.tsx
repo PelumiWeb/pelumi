@@ -89,8 +89,8 @@ const Skills = (props: Props) => {
       </h1>
 
       <div className="grid place-items-start grid-cols-1 md:grid-cols-2 w-full ">
-        {skills.map((data) => (
-          <SkillsItem {...data} />
+        {skills.map((data, index) => (
+          <SkillsItem key={index} {...data} />
         ))}
       </div>
     </div>

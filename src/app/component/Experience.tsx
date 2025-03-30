@@ -25,11 +25,7 @@ const ExperienceCard = (data: ExperienceProps) => {
     margin: "-100px",
   }); //
   return (
-    <a
-      target="_blank"
-      rel="noopener noreferrer"
-      href={data.link}
-      >
+    <a target="_blank" rel="noopener noreferrer" href={data.link}>
       <motion.div
         // onClick={() => router.push(data.link)}
         ref={ref}
@@ -116,8 +112,8 @@ const Experience = (props: Props) => {
               "I improved the website’s UX by streamlining navigation, merging four pages into one to enhance usability. I implemented new designs with pixel-perfect precision, ensuring a high-quality user interface. Additionally, I developed new features based on user needs, resulting in positive feedback and an improved overall experience. ",
             link: "https://bizforcenow.com/",
           },
-        ].map((data) => (
-          <ExperienceCard {...data} />
+        ].map((data, key) => (
+          <ExperienceCard key={key} {...data} />
         ))}
       </div>
     </div>

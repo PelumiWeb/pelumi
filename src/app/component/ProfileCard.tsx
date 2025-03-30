@@ -18,7 +18,7 @@ const ProfileCard = (props: Props) => {
         <div className="w-full flex justify-center items-center ">
           <div className="w-[240px] h-[284px] relative mt-4">
             <Image
-              src={"/pelumi.PNG"}
+              src={"/pelumi.png"}
               alt=""
               fill
               className="rounded-[10px] object-cover w-full h-full"

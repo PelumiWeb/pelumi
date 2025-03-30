@@ -124,8 +124,8 @@ const Project = (props: Props) => {
             image: "/clane.jpg",
             link: "https://play.google.com/store/apps/details?id=com.clane.app&hl=en",
           },
-        ].map((data) => (
-          <ProjectCard {...data} />
+        ].map((data, index) => (
+          <ProjectCard key={index}  {...data} />
         ))}
       </motion.div>
     </motion.div>
